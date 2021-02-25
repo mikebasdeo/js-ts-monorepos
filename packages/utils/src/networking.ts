@@ -53,5 +53,6 @@ export async function apiCall(
   }
   if (!response.ok)
     throw new HTTPError(response, "Problem while making API call");
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return json;
 }
