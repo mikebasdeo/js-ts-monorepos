@@ -9,6 +9,14 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts":{
+    "mike": "scripty",
+    "joe": "scripty",
+    "wp:build": "scripty",
+    "wp:clean": "scripty",
+    "wp:lint": "scripty",
+    "wp:test": "scripty"
+  },
   "volta": {
     "node": "14.15.5",
     "yarn": "1.22.10"
@@ -17,6 +25,8 @@
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
     "eslint": "^7.20.0",
-    "rimraf": "^3.0.2"
+    "lerna": "^3.22.1",
+    "rimraf": "^3.0.2",
+    "scripty": "^2.0.0"
   }
 }
