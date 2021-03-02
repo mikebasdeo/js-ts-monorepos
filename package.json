@@ -9,23 +9,35 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts":{
+  "scripts": {
     "mike": "scripty",
     "joe": "scripty",
     "wp:build": "scripty",
     "wp:clean": "scripty",
     "wp:lint": "scripty",
-    "wp:test": "scripty"
+    "wp:test": "scripty",
+    "postinstall": "husky install"
   },
   "volta": {
     "node": "14.15.5",
     "yarn": "1.22.10"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@commitlint/config-lerna-scopes": "^12.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
+    "commitlint": "^12.0.1",
     "eslint": "^7.20.0",
+    "husky": "^5.1.1",
     "lerna": "^3.22.1",
+    "lerna-changelog": "^1.0.1",
     "rimraf": "^3.0.2",
     "scripty": "^2.0.0"
   }
